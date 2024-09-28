@@ -1,7 +1,7 @@
 export const formASchema = {
   name: "Form - A",
-  rows: 5,
-  columns: 2,
+  rows: 4,
+  columns: 3,
   fields: [
     {
       _uid: 1,
@@ -10,6 +10,18 @@ export const formASchema = {
       type: "input",
       rowSpan: 1,
       colSpan: 1,
+      validations: [
+        {
+          type: "minLength",
+          value: 5,
+          message: "Name should be minimum of 5 characters",
+        },
+        {
+          type: "maxLength",
+          value: 20,
+          message: "Name should be maximum of 20 characters",
+        },
+      ],
     },
     {
       _uid: 2,
@@ -17,7 +29,7 @@ export const formASchema = {
       label: "Preferred Name",
       type: "input",
       rowSpan: 1,
-      colSpan: 1,
+      colSpan: 2,
     },
     {
       _uid: 3,
@@ -25,7 +37,7 @@ export const formASchema = {
       label: "Address",
       type: "input",
       rowSpan: 1,
-      colSpan: 2,
+      colSpan: 3,
     },
     {
       _uid: 4,
@@ -66,6 +78,10 @@ export const formASchema = {
       type: "dropdown",
       rowSpan: 1,
       colSpan: 1,
+      options: [
+        { value: "KA", label: "Karnataka" },
+        { value: "GJ", label: "Gujarat" },
+      ],
     },
     {
       _uid: 9,
@@ -74,6 +90,10 @@ export const formASchema = {
       type: "dropdown",
       rowSpan: 1,
       colSpan: 1,
+      options: [
+        { value: "IN", label: "India" },
+        { value: "UK", label: "United Kingdom" },
+      ],
     },
   ],
 };

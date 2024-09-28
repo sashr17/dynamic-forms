@@ -1,3 +1,7 @@
 .root {
     margin: 16px;
 }
+
+.textCenter {
+    text-align: center;
+}

@@ -1,0 +1,7 @@
+:global(.textCenter) {
+    text-align: center;
+}
+
+.cta {
+    --button-background-color: var(--salt)
+}
